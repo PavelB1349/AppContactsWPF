@@ -1,0 +1,30 @@
+﻿<Window x:Class="Exam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exam"
+        mc:Ignorable="d"
+        Title="Contacts" Height="400" Width="400">
+    <Grid>
+        <StackPanel Background="AntiqueWhite">            
+            <Menu>
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Добавить контакт" Click="BAddContact_Click"/>
+                    <MenuItem Header="Удалить контакт" Click="BFindContact_Click"/>
+                </MenuItem>
+                <MenuItem Header="Поиск">
+                    <MenuItem Header="Найти по имени" Click="BFindContact_Click"/>
+                </MenuItem>
+                <MenuItem Header="Показать все" Click="BAllContacts_Click"/>
+                <MenuItem Header="Выйти" Click="BExit_Click"/>
+            </Menu>
+            <StackPanel >
+                <ScrollViewer Height="350">
+                    <TextBlock Name="tbDisplay" Background="SkyBlue" Margin="10"/>
+                </ScrollViewer>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

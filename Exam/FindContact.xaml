@@ -1,0 +1,30 @@
+﻿<Window x:Class="Exam.FindContact"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exam"
+        mc:Ignorable="d"
+        Title="Find and delete contact." Height="330" Width="400">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>            
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Label Content="Введите имя контакта"/>
+            <TextBox Name="tNameForDelete"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="bFindContact" Content="Искать" Click="FindContact_Click"/>
+                <Button Name="bDelete" Content="Удалить" Click="BDelete_Click"/>
+                <Button Name="bBack" Content="Назад" Click="BBack_Click"/>
+            </StackPanel>            
+            <ScrollViewer Height="200">
+                <TextBlock Name="tbDisplay" Text="" Margin="5"/>
+            </ScrollViewer>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
